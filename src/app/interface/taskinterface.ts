@@ -11,3 +11,9 @@ export interface ApiResponce{
     },
     token:string
 }
+
+export interface TaskType{
+    task:string
+    status:string
+    id:string
+}

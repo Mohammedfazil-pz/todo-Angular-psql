@@ -1,18 +1,20 @@
 <div class="home-container">
     <div class="home-row">
         <h1>Todos</h1>
-        <input type="text" placeholder="What do you need to do?">
+        <input type="text" placeholder="What do you need to do?" [(ngModel)]="inputValue" name="inputValue" (keydown.enter)="onInput()">
+            <!-- <button id="task-addbtn">Add <i class="fa-solid fa-plus"></i></button> -->
         <div class="home-list">
-            <div class="home-list-container">
+            <div class="home-list-container" *ngFor="let eachTask of taskArray">
                 <div>
-                    <input type="checkbox">
-                    <h2>Get interview</h2>
+                    <input checked="false" type="checkbox" >
+                    <h2>{{eachTask.task}}</h2>
                 </div>
                 <div>
-                    <button ><i class="fa-solid fa-trash"></i></button>
-                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button (click)="onDeleteTask(eachTask.id)"><i class="fa-solid fa-trash"></i></button>
+                    <button (click)="ModalValue(eachTask)" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
                 </div>
             </div>
+        
             
         </div>
     </div>
@@ -21,7 +23,8 @@
 
 <!-- modal -->
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -29,11 +32,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-       <input type="text">
+       <input class="form-control" type="text" [value]="modalTask?.task" #modalinp>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" (click)="onUpdateClick(modalinp)">Save changes</button>
       </div>
     </div>
   </div>
