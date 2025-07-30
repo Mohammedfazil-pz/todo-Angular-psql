@@ -1,0 +1,32 @@
+.toast-container{
+    position: absolute;
+    top: 10px;
+    right: -200px;
+    overflow: hidden;
+    transition: 0.1s;
+}
+.each-box{
+    background-color: white;
+    width: 200px;
+    text-align: center;
+    border-left: 10px solid darkgreen;
+    border-radius: 10px;
+    padding: 18px;
+    transition: 1s;
+}
+.each-box h1{
+    font-weight: 400;
+    font-size: 17px;
+
+    
+}
+
+.box-true{
+    right: 100px;
+     position: absolute;
+    top: 10px;
+    right: 0px;
+    transition: 0.1s;
+    overflow: hidden;
+}
+

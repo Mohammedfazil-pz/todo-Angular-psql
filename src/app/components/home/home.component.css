@@ -1,0 +1,87 @@
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.home-row{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 600px;
+}
+
+.home-row h1{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+}
+
+.home-row input{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    outline: none;
+}
+.home-row input::placeholder{
+    color: white;
+}
+.home-list{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+ 
+}
+
+.home-list-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.home-list-container div{
+    display: flex;
+    gap: 10px;
+}
+
+.home-list-container div h2{
+    font-weight: lighter;
+}
+.home-list-container div input{
+    width: 40px;
+    cursor: pointer;
+}
+
+.home-list-container div button{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+.home-list-container div button:hover{
+    background-color: darkmagenta;
+    color: white;
+}
+
+.modal-body input{
+       padding: 10px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+}
+
+
+@media screen and (max-width:625px) {
+    .home-row{
+        min-width: 0px;
+        width: 90%;
+    }
+}

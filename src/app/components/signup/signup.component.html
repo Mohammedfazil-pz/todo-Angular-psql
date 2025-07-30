@@ -1,0 +1,14 @@
+<div class="login-container">
+    <form class="login-row" [formGroup]="RegisterForm">
+        <h1>REGISTER</h1>
+        <div class="input-div">
+            <input type="text" placeholder="Username" formControlName="username" name="username" >
+             <span style="color: red;" *ngIf="RegisterForm.get('username')?.errors&& RegisterForm.get('username')?.touched">Username atleast 4 character(only allowed 0-9/a-z)</span>
+            <input type="email" placeholder="Email" formControlName="email" name="email">
+            <input type="password" placeholder="Password" formControlName="password" name="password">
+            <span style="color: red;" *ngIf="RegisterForm.get('password')?.errors&& RegisterForm.get('password')?.touched">Password atleast 4 character!</span>
+        </div>
+        <button (click)="onRegisterClick()">LOGIN</button>
+        <p>Already member? <a routerLink="/">Sign In now</a></p>
+    </form>
+</div>

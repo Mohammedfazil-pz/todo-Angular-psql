@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: outfit;
+}
+body{
+    background-image: url('https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?cs=srgb&dl=pexels-veeterzy-114979.jpg&fm=jpg');
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6,p,div{
+    margin: 0px;
+    padding: 0px;
+}
